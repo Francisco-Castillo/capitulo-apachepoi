@@ -6,3 +6,5 @@ Este capítulo contiene ejemplos de manipulación de archivos Excel y Word con l
 ## Contenido
 - Lectura de archivo xls y visualización en un DataTable
 - Creación de archivo xlsx desde base de datos
+- Creación de documento Word vacio
+- Creación de documento Word con párrafos

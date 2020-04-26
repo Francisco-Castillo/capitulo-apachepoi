@@ -5,7 +5,11 @@
  */
 package com.fcastillo.capitulo.apachepoi.controller;
 
+import com.fcastillo.capitulo.apachepoi.ejb.FacultadesFacadeLocal;
+import com.fcastillo.capitulo.apachepoi.entity.Facultades;
 import com.fcastillo.capitulo.apachepoi.utilidades.UWord;
+import java.util.List;
+import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
@@ -19,6 +23,8 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class WordController {
 
+    @EJB
+    FacultadesFacadeLocal facultadFacade;
     private String texto;
 
     public String getTexto() {
@@ -43,5 +49,11 @@ public class WordController {
 
     public void clear() {
         texto = "";
+    }
+
+    public void crearTabla() {
+        List<Facultades> lstFacultadas = facultadFacade.findAll();
+        UWord.crearTablaFacultad(lstFacultadas);
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Archivo generado", null));
     }
 }

@@ -13,6 +13,9 @@
           <p:commandButton value="Crear documento vacio" 
                            actionListener="#{wordController.crear()}"
                            update=":frmPrincipal:mensaje"/>
+          <p:commandButton value="Crear tabla" 
+                           actionListener="#{wordController.crearTabla()}"
+                           update=":frmPrincipal:mensaje"/>
           <p:messages id="mensaje" showDetail="true" closable="true">
             <p:autoUpdate />
           </p:messages>

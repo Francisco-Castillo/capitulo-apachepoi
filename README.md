@@ -1,5 +1,5 @@
-# Apache POI
-Este capítulo contiene ejemplos de manipulación de archivos Excel y Word con la libreria Apache POI.
+# Procesamiento de ficheros en Java
+Este capítulo contiene ejemplos de manipulación de archivos CSV, Excel, y Word con las librerias Apache Commons CSV y Apache POI.
 
 ![estado](https://img.shields.io/badge/estado-activo-success) ![basededatos](https://img.shields.io/badge/base%20de%20datos-si-success)
 

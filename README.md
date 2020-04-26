@@ -9,3 +9,4 @@ Este capítulo contiene ejemplos de manipulación de archivos CSV, Excel, y Word
 - Creación de documento Word vacio
 - Creación de documento Word con párrafos
 - Creacion de documento Word desde una consulta a la BD
+- Lectura de archivo CSV

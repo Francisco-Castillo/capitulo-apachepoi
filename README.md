@@ -10,3 +10,4 @@ Este capítulo contiene ejemplos de manipulación de archivos JSON,CSV, Excel, y
 - Creación de documento Word con párrafos
 - Creacion de documento Word desde una consulta a la BD
 - Lectura de archivo CSV
+- Lectura y procesamiento de archivo JSON

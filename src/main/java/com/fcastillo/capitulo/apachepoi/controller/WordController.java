@@ -26,6 +26,8 @@ public class WordController {
     @EJB
     FacultadesFacadeLocal facultadFacade;
     private String texto;
+    private String usuario;
+    private String password;
 
     public String getTexto() {
         return texto;
@@ -34,6 +36,24 @@ public class WordController {
     public void setTexto(String texto) {
         this.texto = texto;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
 
     public void crear() {
         UWord.crearDocumentoVacio();

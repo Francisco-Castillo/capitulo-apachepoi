@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
   <h:head>
     <title>Facelet Title</title>
   </h:head>
@@ -19,6 +20,22 @@
           <p:messages id="mensaje" showDetail="true" closable="true">
             <p:autoUpdate />
           </p:messages>
+        </h:form>
+      </div>
+      <div class="ui-lg-6">
+        <h:form id="componentes">
+          <h:panelGrid columns="1">
+            <h:inputText id="userName" value="#{wordController.usuario}">
+              <f:ajax render="summit" execute="@form" event="keyup"/>
+            </h:inputText>
+            <h:inputSecret id="password" value="#{wordController.password}">
+              <f:ajax  render="summit" execute="@form" event="keyup"/>
+            </h:inputSecret>
+            <h:commandButton id="summit" type="submit" value="Signin"
+                             disabled="#{empty wordController.usuario or empty wordController.password}" >
+              <f:ajax execute="@form" render="@form"/>
+            </h:commandButton>
+          </h:panelGrid>
         </h:form>
       </div>
     </div>
